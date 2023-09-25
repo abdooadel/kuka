@@ -1,0 +1,84 @@
+.cartis-pos-container 
+{
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-color: rgb(49, 52, 74);
+  width: 570px;
+  height: 610px;
+  gap: 15px;
+  flex-shrink: 0;
+  border-width: 4px;
+  margin-left: 10px;
+  overflow: hidden;
+
+}
+.axis-pos-container{
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-color: rgb(49, 52, 74);
+  width: 570px;
+  height: 610px;
+  gap: 15px;
+  flex-shrink: 0;
+  border-width: 4px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.position-grid{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 250px 300px;
+  align-items: center;
+}
+
+.cartesianCordinates{
+  display: grid;
+  grid-template-columns: 50px 200px;
+  row-gap: 32px;
+}
+
+.axis-cordinates{
+    display: grid;
+    grid-template-columns: 60px 200px;
+    row-gap: 32px;
+  margin-left: -10px;
+}
+
+
+
+
+
+.cartesianCordinates div   {
+  display: inline-block;
+  align-items: start;
+  margin-left: 30px;
+  font-size:30px;
+  font-weight: bold;
+  color:rgb(49, 52, 74) ;
+}
+
+.axis-cordinates div   {
+  display: inline-block;
+  align-items: start;
+  margin-left: 30px;
+  font-size:30px;
+  font-weight: bold;
+  color:rgb(49, 52, 74) ;
+}
+.position-number  {
+  font-size: 25px;
+}
+
+.xyz-cordinates-img{
+  width:320px;
+  height: 450px;
+  margin-left: 0px ;
+}
+
+.axis-cordinates-img{
+  width: 320px;
+  height: 450px;
+}

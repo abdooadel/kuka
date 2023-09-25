@@ -1,0 +1,307 @@
+
+<!-- With these AWP-Statements the variables are allowed to be written to, e.g. by using HTML forms -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>KRC STATUS</title>
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/krc.status.css">
+    <script src="jquery-2.0.2.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="logo-container">
+      <img src="images/hs_bochum_logo.svg" class="logo" alt="">
+    </div>
+
+    <div class="stop-button-container">
+      <button class="emergency-stop js-emergency-stop">STOP</button>
+    </div>
+    <div class="info-box">
+      <div class="smartpad-mode">
+        <div>KR C4  </div>
+        <div> 
+          <p class="T1 js-T1">T1</p>
+          <p class="T2 js-T2">T2</p>
+          <p class="AUT js-aut">AUT</p>
+          <p class="EXT js-ext">EXT</p>
+        </div>
+      </div>
+      <div class="PLC">
+        <div>S7-PLC</div>
+        <button class="Reduce js-reduce">Reduce</button>
+        <button class="not-Reduce js-notReduce">Not Reduced</button>
+      </div>
+      <div class="robot-onoff">
+        <div >
+          Robot Power
+        </div>
+        <p class="js-robotON robotON">Robot ON</p>
+        <p class="js-robotFF robotOFF">Robot OFF</p>
+      </div>
+    </div>
+    <div class="override-control">
+      <button class="js-set0">0%</button>
+      <button class="js-min10">-10</button>
+      <button class="js-min1">-1</button>
+      <div class="override-text js-over-info"><p class="js-override-info">Override 100%</p></div>
+      <button class="js-add1">+1</button>
+      <button class="js-add10">+10</button>
+      <button class="js-setMax">100%</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <a href="robot-status.html">
+      <Button class="control"> 
+        Control Connection
+      </Button >
+    </a>
+      <a href="3-krc-status.html">
+      <Button class="control"> 
+        KRC Status
+      </Button >
+    </a>
+    <a href="1-jog-axis.html">
+      <Button class="control js-jog-axis-pressed"> 
+        Jog AXIS
+      </Button >
+      </a>
+      <a href="2-jog-base.html">
+        <Button class="control js-jog-base-pressed"> 
+          Jog BASE
+        </Button >
+        <a href="4-learned-points.html">
+          <Button class="control"> 
+            Learned points
+          </Button >
+        </a>
+        <a href="5-movement-base-linear.html">
+          <Button class="control"> 
+            Movement
+          </Button >
+        </a>
+        <a href="6-STRECKE.html">
+          <Button class="control"> 
+            STRECKE
+          </Button >
+        </a>
+    
+
+   </div>
+
+
+    
+
+    <div class="GRID">
+      <div class="mxAutomation-status-container">
+        <div class="title-container">
+          <div class="title">MxAutomation STATUS </div>
+          <div class="valid js-selec-0">
+            VALID
+          </div>
+        </div>
+        <div class="inner-info">
+          <div class="raw1 ">
+            <div>Robot Ready</div>
+             <div class="container1 js-selec-1">
+              <div class="omk">Robot Error</div>
+            </div>
+            <div>No Emergency Stop</div>
+            <div class="container1 js-selec-2">
+             <div class="omk">ALARM STOP</div>
+           </div>
+           <div>User Protection</div>
+           <div class="container1 js-selec-3">
+            <div class="omk">USER SAFE</div>
+          </div>
+          <div>Drives ON</div>
+          <div class="container1 js-selec-4">
+           <div class="omk">PERI RDY</div>
+         </div>
+         <div>Axes Adjusted</div>
+         <div class="container1 js-select-a0">
+          <div class="omk">ROB CAL</div>
+        </div>
+        <div>EXT Activ</div>
+        <div class="container1 js-select-a1">
+         <div class="omk">IO ACTCONF</div>
+       </div>
+       <div>Robot Error</div>
+       <div class="container1 js-select-a2">
+        <div class="omk">STOP MESS</div>
+      </div>
+           
+          </div>
+          <div class="raw2">
+            <div>Process Active</div>
+            <div class="container1 js-select-a3">
+             <div class="omk">PRO ACT</div>
+           </div>
+           <div>Robot Progress</div>
+           <div class="container1 js-select-a4">
+            <div class="omk">APPL RUN</div>
+          </div>
+          <div>Sync. Movement</div>
+          <div class="container1 js-select-b0">
+            <div class="omk">PRO MOVE</div>
+         </div>
+         <div>ON Track</div>
+         <div class="container1 js-select-b1">
+          <div class="omk">ON Track</div>
+        </div>
+        <div>Near Position</div>
+        <div class="container1 js-select-b2">
+          <div class="omk">NEAR POS.</div>
+       </div>
+       <div>Robot Stopped</div>
+       <div class="container1 js-select-b3">
+        <div class="omk">ROB STOP</div>
+      </div>
+      <div>Ext. Emergency stop</div>
+      <div class="container1 js-select-b4">
+        <div class="omk">ACTIV</div>
+     </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="Robot-info">
+          <div class="title-container">
+            <div class="title">Robot Inforamtion </div>
+          </div>
+          <div class="Robot-inner-info">
+              <div class="Robot-info-raw">
+                <div class="">Active Tool NO.</div>
+                <div class="container">
+                  <div class="js-c0">00</div>
+                </div>
+                  <div>Active Base NO.</div>
+                  <div class="container">
+                  <div class="js-c1">00</div>
+                </div>
+                <div>Activ Last NO.</div>
+                <div class="container">
+                <div class="js-c2">00</div>
+                </div>
+                <div>Last Order ID</div>
+                <div class="container">
+                <div class="js-c3">00</div>
+                </div>
+                <div>Queue Count</div>
+                <div class="container">
+                <div class="js-c4">00</div>
+                </div>
+                <div>Group State</div>
+                <div class="container">
+                <div class="js-c5">00</div>
+                </div>
+                <div>Online Library Ver.</div>
+                <div class="container100">
+                <div class="small-container js-selec-c1">00</div>
+                <div class="small-container js-selec-c2">00</div>
+                <div class="small-container js-selec-c3">00</div>
+               
+
+                
+               </div>
+               <div>Onffline Library Ver.</div>
+               <div class="container100">
+                <div class="small-container js-selec-c4">00</div>
+                <div class="small-container js-selec-c5">00</div>
+                <div class="small-container js-selec-c6">00</div>
+         </div>
+      </div>
+  </div>
+</div>
+
+    
+      <div class="intial-position">
+        <div class="intial-position-title">
+          ROBOT-PLC       ERRORS
+        </div>
+
+      
+        <div class="intial-position-raw">
+          <div>Robot Interpreter</div>
+          <div class="container1000">
+            <div class="js-d0">00</div>
+          </div>
+            <div>Submit Interpreter</div>
+            <div class="container1000">
+            <div class="js-d1">00</div>
+          </div>
+          <div>Robot-PLC</div>
+          <div class="container1000">
+          <div class="js-d2">0000</div>
+          </div>
+        </div>
+    </div>
+
+
+
+      <div class="mxAutomation-control">
+        <div class="mxAutomation-control-title">
+          MxAutomation Control
+        </div>
+        <div class="krc-modes">
+          <div>
+            KR C4
+          </div>
+          <div class="modes-grid">
+            <div class="t100 js-mode-t1">T1</div>
+            <div class="t200 js-mode-t2">T2</div>
+            <div class="t300 js-mode-aut">AUT</div>
+            <div class="t400 js-mode-ext">EXT</div>
+          </div>
+        </div>
+        <div class="krc-modes">
+          <div>
+          S7-PLC
+        </div>
+        <div class="modes-grid">
+          <button class="b100 js-set-t1">T1</button>
+          <button class="b100 js-set-t2">T2</button>
+          <button class="b200 js-set-aut">AUT</button>
+          <button class="b200 js-set-ext">EXT</button>
+        </div>
+      </div>
+      </div>
+
+    </div>
+    
+    <div class="gripper-IP">
+        <div class="gripper">
+          <div class="rest-text">Reset gripper Execute</div>
+          <button class="rest-butt js-reset-gripper">Gripper Reset</button>
+        </div>
+        <div class="ip-address">
+          <div class="ip-text">
+            IP Adresse KRC4
+          </div>
+          <div class="ip-nummber">
+            <div class="js-d3">000</div> 
+            <div class="dot">.</div>
+            <div class="js-d4">000</div>
+            <div class="dot">.</div>
+
+            <div class="js-d5">000</div>
+            <div class="dot">.</div>
+
+            <div class="js-d6">000</div>
+          </div>
+        </div>
+    </div>
+
+
+
+      <script src="3-krc-status.js"></script>
+   
+  </body>
+</html>
+
+

@@ -1,0 +1,218 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 175px;
+  margin-top: 200px;
+}
+.GRID{
+  display: grid;
+  grid-template-columns: 540px 600px 600px ; 
+  border-color: rgb(49, 52, 74);
+  border-style: solid;
+  min-height: 0; 
+  min-width: 1740px;
+  
+}
+
+.condition-container{
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  border-color: rgb(49, 52, 74);
+  width: 530px;
+  height: 700px;
+  gap: 15px;
+  flex-shrink: 0;
+  border-width: 4px;
+
+}
+
+.condition-container .title-container{
+  display: flex;
+  background-color:rgb(49, 52, 74) ;
+  flex-direction: column;
+  align-self: start;
+  gap: 20px;
+  flex-shrink: 0;
+
+}
+.title{
+  background-color:rgb(49, 52, 74) ;
+  font-size: 27px;
+  color: white;
+  align-self: stretch;
+  padding-left: 5px;
+}
+
+
+.connection-buttons{
+  align-self: center;
+  margin-bottom: 10px;
+}
+.connection-buttons button{
+  width: 200px;
+  height: 150px;
+  font-size: 25px;
+  letter-spacing: normal;
+  text-align: center;
+  border: none;
+  margin-right: 20px;
+  color: white;
+  border-radius: 10px;
+  
+  cursor: pointer;
+  transition: 0.3s;
+}
+.connection-buttons button:hover{
+  color: black;
+  box-shadow: 10px 10px 10px rgb(139, 135, 135);  
+}
+.start-button{
+  background-color: green;
+}
+.end-button{
+  background-color: red;
+}
+
+
+.all-bar-info{
+  height:  80px;
+  margin-left: 21px;
+  margin-right: 8px;
+  margin-bottom: 40px;
+  width: 488px;
+  background-color:rgb(49, 52, 74);
+}
+
+.progress-bar-container {
+  height:   30px;
+  margin-top: 0px;
+  position: relative;
+  width: 446px;
+  flex-direction: column;
+  border-style: solid;
+  border-color:rgb(49, 52, 74) ;
+  border-top: 00px;
+  border-width: 3px;
+  background-color: red;
+  margin-left: 17px;
+  margin-right: 0px;
+}
+.progress-bar0 {
+  height: 100%;
+  background-color: green;
+  border-radius: 0px;
+  width: 0%;
+  transition: 0.4s;
+
+}
+.progress-bar1{
+  width: 13%;
+}
+
+.progress-bar2{
+  width: 25%;
+}
+.progress-bar3{
+  width: 38%; 
+}
+.progress-bar4{
+  width: 50%;
+}
+.progress-bar5{
+  width: 63%;
+}
+.progress-bar6{
+  width: 75%;
+}
+.progress-bar7{
+  width: 88%;
+}
+.progress-bar8{
+
+
+  width: 100%;
+
+}
+
+
+
+
+
+
+
+.progress-labels-container {
+  display: flex;
+  position: absolute;
+  bottom: -34px;
+  left:-2px ;
+  justify-content:space-between ;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  width: 450px;
+  font-weight: bold;
+  color:white ;
+  flex-shrink: 0;
+
+}
+.progress-label {
+  margin-bottom: 3px;
+  font-size: 15px;
+  position: relative;
+}
+.progress-label4 ,
+.progress-label6,
+.progress-label2,
+.progress-label8{
+ 
+  position: relative;
+}
+.number{
+  position: absolute;
+  bottom: -30px;
+  left: 3px;
+  font-size: 25px;
+
+}
+
+
+.status-container,
+.interface-status-container,
+.robot-connection-container
+{
+  border-color: rgb(49, 52, 74) ;
+  border-style: solid;
+  border-width: 20px;
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  height: 60px;
+  width: 484px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: none;
+  border-right: none ;
+  background-color: rgb(128, 128, 128);
+  align-self: center;
+  margin-bottom: 30px;
+  color: white;
+  transition: 0.5s;
+}
+.robot-status,
+.interface-status,
+.robot-connection{
+  font-size: 29px;
+  font-weight: bold;
+  transition: 0.5s;
+
+}
+
+.status-OFF{
+  background-color: red;
+  color:rgb(49, 52, 74) ;
+}
+.status-ON{
+  background-color: green;
+  color:rgb(49, 52, 74) ;
+
+}

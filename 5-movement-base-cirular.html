@@ -1,0 +1,326 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>CIRCULAR MOVEMENT</title>
+    <link rel="stylesheet" href="styles/robot-status-container.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="5-movement-base-circular.css">
+    <script src="jquery-2.0.2.min.js"></script>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-container">
+        <img src="images/hs_bochum_logo.svg" class="logo" alt="">
+      </div>
+
+      <div class="stop-button-container">
+        <button class="emergency-stop js-emergency-stop">STOP</button>
+      </div>
+      <div class="info-box">
+        <div class="smartpad-mode">
+          <div>KR C4  </div>
+          <div> 
+            <p class="T1 js-T1">T1</p>
+            <p class="T2 js-T2">T2</p>
+            <p class="AUT js-aut">AUT</p>
+            <p class="EXT js-ext">EXT</p>
+          </div>
+        </div>
+        <div class="PLC">
+          <div>S7-PLC</div>
+          <button class="Reduce js-reduce">Reduce</button>
+          <button class="not-Reduce js-notReduce">Not Reduced</button>
+        </div>
+        <div class="robot-onoff">
+          <div >
+            Robot Power
+          </div>
+          <p class="js-robotON robotON">Robot ON</p>
+          <p class="js-robotFF robotOFF">Robot OFF</p>
+        </div>
+      </div>
+      <div class="override-control">
+        <button class="js-set0">0%</button>
+        <button class="js-min10">-10</button>
+        <button class="js-min1">-1</button>
+        <div class="override-text js-over-info"><p class="js-override-info">Override 100%</p></div>
+        <button class="js-add1">+1</button>
+        <button class="js-add10">+10</button>
+        <button class="js-setMax">100%</button>
+      </div>
+    </div>
+
+
+    <div class="sidebar">
+      <a href="robot-status.html">
+        <Button class="control"> 
+          Control Connection
+        </Button >
+      </a>
+        <a href="3-krc-status.html">
+        <Button class="control"> 
+          KRC Status
+        </Button >
+      </a>
+      <a href="1-jog-axis.html">
+        <Button class="control js-jog-axis-pressed"> 
+          Jog AXIS
+        </Button >
+        </a>
+        <a href="2-jog-base.html">
+          <Button class="control js-jog-base-pressed"> 
+            Jog BASE
+          </Button >
+          <a href="4-learned-points.html">
+            <Button class="control"> 
+              Learned points
+            </Button >
+          </a>
+          <a href="5-movement-base-linear.html">
+            <Button class="control"> 
+              Movement
+            </Button >
+          </a>
+          <a href="6-STRECKE.html">
+            <Button class="control"> 
+              STRECKE
+            </Button >
+          </a>
+      
+
+     </div>
+
+   <div class="target-position-GRID">
+    <div class="target-position-container">
+
+      <div class="target-position">
+        <div class="main-title">
+    CIRCULAR MOVEMENT 
+  </div>
+    <div class="target-position-title">
+       TARGET POSITION
+      </div>
+    <div class="position-grid">
+        <div class="position-container">
+            <div class="axis-text">X</div>
+            <div class="Axis-num">
+                <input type="text" class="input-position js-cir-x x1" placeholder="Enter X value">
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">A</div>
+            <div class="Axis-num">
+                <input type="text" class="input-position js-cir-a x4" placeholder="Enter A value">
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">Y</div>
+            <div class="Axis-num ">
+                <input type="text" class="input-position js-cir-y x2" placeholder="Enter Y value">
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">B</div>
+            <div class="Axis-num">
+                <input type="text" class="input-position js-cir-b x5" placeholder="Enter B value">
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">Z</div>
+            <div class="Axis-num">
+                <input type="text" class="input-position js-cir-z x3" placeholder="Enter Z value">
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">C</div>
+            <div class="Axis-num">
+                <input type="text" class="input-position js-cir-c x6" placeholder="Enter C value">
+            </div>
+        </div>
+    </div>
+  
+  
+</div>
+<div class="target-position">
+  <div class="target-position-title">
+    AUXILIARY POSITION
+    </div>
+  <div class="position-grid">
+      <div class="position-container">
+          <div class="axis-text">X</div>
+          <div class="Axis-num">
+              <input type="text" class="input-position js-Hcir-x y1" placeholder="Enter X value">
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">A</div>
+          <div class="Axis-num">
+              <input type="text" class="input-position js-Hcir-a y4" placeholder="Enter A value ">
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">Y</div>
+          <div class="Axis-num">
+              <input type="text" class="input-position js-Hcir-y  y2" placeholder="Enter Y value">
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">B</div>
+          <div class="Axis-num">
+              <input type="text" class="input-position js-Hcir-b y5" placeholder="Enter B value">
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">Z</div>
+          <div class="Axis-num">
+              <input type="text" class="input-position js-Hcir-z y3" placeholder="Enter Z value">
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">C</div>
+          <div class="Axis-num">
+              <input type="text" class="input-position js-Hcir-c y6" placeholder="Enter C value">
+          </div>
+      </div>
+  </div>
+
+
+</div>
+    </div>
+
+    <div class="motion-position">
+      <div class="motion-status">
+          <div class="motion-status-title">
+            MOTION STATUS
+          </div>
+          <div class="motion-status-text">
+            <div class="tx1">
+              Robot is in Motion
+            </div>
+            <div class="tx2 js-busy"> 
+              <div class="">BUSY</div>
+            </div>
+          </div>
+          <div class="motion-status-text">
+            <div class="tx1">
+              Error During Movement
+            </div>
+            <div class="tx2 js-error"> 
+              <div>ERROR</div>
+            </div>
+          </div>
+          <div class="motion-status-text">
+            <div class="tx1">
+              Error Description
+            </div>
+            <div class="tx2 js-error-num">
+               <div class="">
+                00000
+              </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="position-status">
+        
+        <div class="position-status-title">Actual Robot Position</div>
+        <div class="position-status-grid">
+          <div class="axis-grid" >
+            <div class="axis-info">
+
+              <div class="axix-text " >X</div>
+              <div class="axix-num z0">0</div>
+            </div>
+            <div class="axis-info">
+
+              <div class="axix-text" >A</div>
+              <div class="axix-num z3">0</div>
+            </div>
+            <div class="axis-info">
+
+              <div class="axix-text" >Y</div>
+              <div class="axix-num z1">0</div>
+            </div>
+            <div class="axis-info">
+
+              <div class="axix-text" >B</div>
+              <div class="axix-num z4">0</div>
+            </div>
+            <div class="axis-info">
+
+              <div class="axix-text" >Z</div>
+              <div class="axix-num z2">0</div>
+            </div>
+            <div class="axis-info">
+
+              <div class="axix-text" >C</div>
+              <div class="axix-num z5">0</div>
+            </div>
+            <div class="axis-info">
+
+              <div class="axix-text" >S</div>
+              <div class="axix-num z6">0</div>
+            </div>
+            <div class="axis-info">
+
+              <div class="axix-text" >T</div>
+              <div class="axix-num z7">0</div>
+            </div>
+
+          </div>
+          <div class="axix-photo">
+            <img class="axis-photo" src="images/xyzCordinates.png" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+   <div class="background adjust">
+    <div class="save-points-grid">
+      <div class="index-text">
+        TOCHUP INDEX    
+      </div>
+      <div class="input-div">
+        <input type="text" class="index js-input" placeholder="Enter Index">
+      </div>
+      
+         <button class="save-pos-butt js-move "> 
+          MOVE </button>
+         <a href="5-movement-base-linear.html">
+          <button class="save-pos-butt"> LINEAR</button>
+         </a>
+         <a class="link1" href="5-movement-axis.html">
+          <button class="save-pos-butt js-save-pos">
+            PTP AXIS 
+           </button>
+         </a>
+
+         <a class="link" href="5-movement-base-ptp-cart.html">
+          <button class="save-pos-butt">
+            PTP CARTISIAN
+          </button>
+         </a>
+         <button class="save-pos-butt js-move-home">
+           MOVE TO HOME POSTITION
+         </button>
+       
+    </div>
+   </div>
+   <div class="back">
+    <button class="save-pos-butt adjust2 js-read-Hpoint"> READ AUXILIARY POINT </button>
+    <button class="save-pos-butt adjust2 js-read-Tpoint"> READ TARGET POINT </button>
+   </div>
+
+
+
+
+
+
+<script src="5-movement-base-circular.js"></script>
+</body>
+</html>

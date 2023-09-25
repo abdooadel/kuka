@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>STRECKE LERNEN</title>
+    <link rel="stylesheet" href="styles/robot-status-container.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="6-sterke-lernen.css">
+    <script src="jquery-2.0.2.min.js"></script>
+
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo-container">
+        <img src="images/hs_bochum_logo.svg" class="logo" alt="">
+      </div>
+
+      <div class="stop-button-container">
+        <button class="emergency-stop js-emergency-stop">STOP</button>
+      </div>
+      <div class="info-box">
+        <div class="smartpad-mode">
+          <div>KR C4  </div>
+          <div> 
+            <p class="T1 js-T1">T1</p>
+            <p class="T2 js-T2">T2</p>
+            <p class="AUT js-aut">AUT</p>
+            <p class="EXT js-ext">EXT</p>
+          </div>
+        </div>
+        <div class="PLC">
+          <div>S7-PLC</div>
+          <button class="Reduce js-reduce">Reduce</button>
+          <button class="not-Reduce js-notReduce">Not Reduced</button>
+        </div>
+        <div class="robot-onoff">
+          <div >
+            Robot Power
+          </div>
+          <p class="js-robotON robotON">Robot ON</p>
+          <p class="js-robotFF robotOFF">Robot OFF</p>
+        </div>
+      </div>
+      <div class="override-control">
+        <button class="js-set0">0%</button>
+        <button class="js-min10">-10</button>
+        <button class="js-min1">-1</button>
+        <div class="override-text js-over-info"><p class="js-override-info">Override 100%</p></div>
+        <button class="js-add1">+1</button>
+        <button class="js-add10">+10</button>
+        <button class="js-setMax">100%</button>
+      </div>
+    </div>
+
+
+    <div class="sidebar">
+      <a href="robot-status.html">
+        <Button class="control"> 
+          Control Connection
+        </Button >
+      </a>
+        <a href="3-krc-status.html">
+        <Button class="control"> 
+          KRC Status
+        </Button >
+      </a>
+      <a href="1-jog-axis.html">
+        <Button class="control js-jog-axis-pressed"> 
+          Jog AXIS
+        </Button >
+        </a>
+        <a href="2-jog-base.html">
+          <Button class="control js-jog-base-pressed"> 
+            Jog BASE
+          </Button >
+          <a href="4-learned-points.html">
+            <Button class="control"> 
+              Learned points
+            </Button >
+          </a>
+          <a href="5-movement-base-linear.html">
+            <Button class="control"> 
+              Movement
+            </Button >
+          </a>
+          <a href="6-STRECKE.html">
+            <Button class="control"> 
+              STRECKE
+            </Button >
+          </a>
+      
+    
+     </div>
+
+   <div class="target-position-GRID">
+    <div class="target-position-container ">
+
+      <div class="target-position1 js-from">
+        
+    <div class="target-position-title">
+       FROM Nr. <span class="point-nr js-a0">00</span>
+      </div>
+    <div class="position-grid">
+        <div class="position-container">
+            <div class="axis-text">X</div>
+            <div class="Axis-num js-a1">
+              +000.00mm
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">A</div>
+            <div class="Axis-num js-a4">
+              +00.00&deg;
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">Y</div>
+            <div class="Axis-num js-a2">
+              +000.00mm
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">B</div>
+            <div class="Axis-num js-a5">
+              +00.00&deg;
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">Z</div>
+            <div class="Axis-num js-a3">
+              +000.00mm
+            </div>
+        </div>
+        <div class="position-container">
+            <div class="axis-text">C</div>
+            <div class="Axis-num js-a6">
+              +00.00&deg;
+            </div>
+        </div>
+     
+    </div>
+    <div class="position-container1 ">
+      <div class="axix-text1">NAME:</div>
+      <div class="axix-num1 js-a7">
+        0000000000000000
+      </div>
+  </div>
+  <div class="position-container2 ">
+    <div class="axix-text1">Teach Index:</div>
+    <div class="axix-num2 js-a8">
+      000
+    </div>
+</div>
+  
+  
+</div>
+
+<div class="position-status">
+        
+  <div class="position-status-title">Actual Robot Position</div>
+  <div class="position-status-grid">
+    <div class="axis-grid" >
+      <div class="axis-info">
+
+        <div class="axix-text " >X</div>
+        <div class="axix-num x0">0</div>
+      </div>
+      <div class="axis-info">
+
+        <div class="axix-text" >A</div>
+        <div class="axix-num x3">0</div>
+      </div>
+      <div class="axis-info">
+
+        <div class="axix-text" >Y</div>
+        <div class="axix-num x1">0</div>
+      </div>
+      <div class="axis-info">
+
+        <div class="axix-text" >B</div>
+        <div class="axix-num x4">0</div>
+      </div>
+      <div class="axis-info">
+
+        <div class="axix-text" >Z</div>
+        <div class="axix-num x2">0</div>
+      </div>
+      <div class="axis-info">
+
+        <div class="axix-text" >C</div>
+        <div class="axix-num x5">0</div>
+      </div>
+     
+
+    </div>
+   
+  </div>
+
+</div>  
+
+</div>
+<div class="mid">
+  <img class="arrow-img" src="6-arrow1.png" alt="">
+  <div class="select-movement">MOVEMENT TYPE :
+    <select name="choose-movement-type" class="choose-movement-type js-select-movement-type">
+      <option value="5">IGN</option>
+      <option value="0">PTP </option>
+      <option value="1">LINEAR</option>
+      <option value="2">CIRCULAR</option>
+      
+      </select>
+  </div>
+  <div class="help-point js-show-grid">
+    <div class="help-title">
+      HELP POINT FOR Nr. <span class="help-point-nr js-c0">00</span>
+    </div>
+    <div class="position-grid1 ">
+      <div class="position-container3">
+          <div class="axix-text3 ">X</div>
+          <div class="axix-num3 js-c1">
+            +000.00mm
+          </div>
+      </div>
+      <div class="position-container3">
+        <div class="axix-text3 ">A</div>
+        <div class="axix-num3 js-c4">
+          +00.00&deg;
+        </div>
+    </div>
+    <div class="position-container3">
+      <div class="axix-text3 ">Y</div>
+      <div class="axix-num3 js-c2">
+        +000.00mm
+      </div>
+  </div>
+  <div class="position-container3">
+    <div class="axix-text3 ">B</div>
+    <div class="axix-num3 js-c5">
+      +00.00&deg;
+    </div>
+</div>
+<div class="position-container3">
+  <div class="axix-text3 ">Z</div>
+  <div class="axix-num3 js-c3">
+    +000.00mm
+  </div>
+</div>
+<div class="position-container3">
+  <div class="axix-text3 ">C</div>
+  <div class="axix-num3 js-c6">
+    +00.00&deg;
+  </div>
+</div>
+      
+   
+    <div class="position-container300 ">
+      <div class="axix-text4">NAME:</div>
+      <input class="axix-num300 js-target-point-nameHP js-c7" type="text" placeholder="Type_a_name">
+  </div>
+  <div></div>
+  <div class="position-container4 ">
+    <div class="axix-text5">Teach Index:</div>
+    <div class="axix-num3 js-c8">
+      00
+    </div>
+</div>
+  </div>
+  </div>
+
+</div>
+<div class="target-position">
+        
+  <div class="target-position-title">
+     TO Nr. <span class="point-nr js-b0">00</span>
+    </div>
+  <div class="position-grid">
+      <div class="position-container">
+          <div class="axis-text">X</div>
+          <div class="Axis-num js-b1">
+            +000.00mm
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">A</div>
+          <div class="Axis-num js-b4">
+            +00.00&deg;
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">Y</div>
+          <div class="Axis-num js-b2">
+            +000.00mm
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">B</div>
+          <div class="Axis-num js-b5">
+            +00.00&deg;
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">Z</div>
+          <div class="Axis-num js-b3">
+            +000.00mm
+          </div>
+      </div>
+      <div class="position-container">
+          <div class="axis-text">C</div>
+          <div class="Axis-num js-b6">
+            +00.00&deg;
+          </div>
+      </div>
+   
+  </div>
+  <div class="position-container1 ">
+    <div class="axix-text1">NAME:</div>
+    
+    <input class="axix-num100 js-target-point-name js-b7" type="text" placeholder="Type_a_name">
+</div>
+<div class="position-container2 ">
+  <div class="axix-text1">Teach Index:</div>
+  <div class="axix-num2 js-b8">
+    000
+  </div>
+</div>
+
+
+</div>
+     
+
+
+</div>
+
+   <div class="background adjust">
+    <div class="save-points-grid">
+      <div class="index-text">
+        TOCHUP INDEX    
+      </div>
+      <div class="input-div">
+        <input type="text" class="index js-input" placeholder="Enter Index">
+      </div>
+      <div class="gripper">GRIPPER</div>
+      <button class="open-gripper js-open-gripper">
+        OPEN
+      </button>
+      <button class="close-gripper js-close-gripper">
+        CLOSE
+      </button>
+      
+         <button class="save-pos-butt js-smothing red"> 
+          SMOTHING </button>
+          <button class="save-pos-butt js-learned-hp mar1"> Teached position as HP reading</button>
+          <button class="save-pos-butt js-read-hp mar">
+            Read Actposition as HP
+           </button>
+        
+          <a href="6-STRECKE.html" class="leeh">
+            <button class="save-pos-butt1 ">STRECKE LIST</button> 
+          </a>
+       
+    </div>
+    <div class="BACK1">
+      <button class="save-pos-butt1 js-read-tp">Read ActPosition as Target point</button>
+      <button class="save-pos-butt js-learn-tp">
+        Read Taught Position as ZP
+      </button>
+    </div>
+    <div class="BACK2">
+      <button class="save-pos-butt12 js-next-button">NEXT</button> 
+      <button class="save-pos-butt12 js-back-button">BACK</button> 
+      <button class="save-pos-butt12 js-save-button">SAVE</button> 
+     </div>
+   </div>
+   
+
+
+
+
+
+
+<script src="6-sterke-lernen.js"></script>
+</body>
+</html>
